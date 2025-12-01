@@ -77,7 +77,7 @@ export default function Hero() {
         <div className="relative animate-fade-in-right">
           <div className="relative w-[420px] h-[420px] mx-auto">
             <div className="relative w-full h-full rounded-full overflow-hidden ring-8 ring-[#7c5cff] shadow-[0_0_0_1px_rgba(124,92,255,0.3),0_0_60px_rgba(124,92,255,0.4),0_0_120px_rgba(124,92,255,0.2),0_30px_60px_rgba(0,0,0,0.6)] animate-pulse-glow">
-              <img src="./IMG-20240821-WA0101.jpg" alt="INEZA TETA Landra" className="w-full h-full object-cover" loading="eager" />
+              <img src="../../IMG-20240821-WA0101.jpg" alt="INEZA TETA Landra" className="w-full h-full object-cover" loading="eager" />
             </div>
             <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-[#00c2ff] to-[#7c5cff] rounded-full animate-float-soft opacity-80"></div>
             <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-gradient-to-r from-[#7c5cff] to-[#00c2ff] rounded-full animate-float-soft opacity-60" style={{animationDelay: '1s'}}></div>
