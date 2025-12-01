@@ -68,7 +68,9 @@ export default function Hero() {
                 Download Resume
               </a>
             </div>
-            
+            <div className="mt-6">
+              <Socials />
+            </div>
           </div>
         </div>
         
