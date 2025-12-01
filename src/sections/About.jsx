@@ -4,19 +4,30 @@ import { motion } from 'framer-motion'
 
 export default function About() {
   return (
-    <Section id="about" eyebrow="ABOUT ME" title="Blending Art & Engineering for Next-Gen UX">
+    <Section id="about" eyebrow="ABOUT ME" title="Crafting Secure & Beautiful Web Experiences">
       <div className="grid gap-8 md:grid-cols-2 items-center">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative"
+          className="relative group"
         >
+          {/* Animated Gradient Background/Glow */}
+          <div className="absolute -inset-4 bg-gradient-to-r from-[#00c2ff] via-[#7c5cff] to-[#00c2ff] rounded-xl opacity-30 blur-2xl group-hover:opacity-60 transition duration-1000 group-hover:duration-200 animate-gradient"></div>
+
           <div className="relative h-[320px] w-[320px] mx-auto">
-            <div className="relative w-full h-full rounded-2xl overflow-hidden ring-4 ring-[#7c5cff] shadow-2xl">
-              <img src="/IMG-20240821-WA0101.jpg" alt="INEZA TETA Landra professional portrait" className="w-full h-full object-cover" loading="lazy" />
-            </div>
+            <motion.div
+              className="relative w-full h-full rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl bg-[#0f141b]"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <img src="/IMG-20240821-WA0101.jpg" alt="INEZA TETA Landra professional portrait" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
+
+              {/* Gradient Overlay on Hover */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#7c5cff]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </motion.div>
           </div>
         </motion.div>
         <motion.div
