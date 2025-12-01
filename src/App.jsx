@@ -1,6 +1,7 @@
 import './index.css'
 import { useEffect, useRef, useState } from 'react'
 import Logo from './assets/logo.svg'
+import Services from './sections/Services'
 
 // Icon component for clean SVG icons
 function Icon({ name, className = "w-6 h-6" }) {
@@ -49,26 +50,26 @@ function Icon({ name, className = "w-6 h-6" }) {
     ),
     linkedin: (
       <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
       </svg>
     ),
     github: (
       <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
       </svg>
     ),
     twitter: (
       <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
       </svg>
     ),
     dribbble: (
       <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.392-6.87zm-6.115 7.808c-.051-.523-1.024-3.834-2.34-7.293C7.844 7.43 2.64 8.816 2.64 8.816c.49 3.939 2.006 7.35 4.393 9.604 1.872-1.108 3.34-2.64 4.252-4.47zm-11.864-9.52c.05.05 4.944 1.146 8.684-.638-1.508-2.67-3.174-4.95-3.174-4.95-3.8 1.427-5.51 5.588-5.51 5.588zm5.51 5.588c.05.05 4.944 1.146 8.684-.638-1.508-2.67-3.174-4.95-3.174-4.95-3.8 1.427-5.51 5.588-5.51 5.588z"/>
+        <path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.392-6.87zm-6.115 7.808c-.051-.523-1.024-3.834-2.34-7.293C7.844 7.43 2.64 8.816 2.64 8.816c.49 3.939 2.006 7.35 4.393 9.604 1.872-1.108 3.34-2.64 4.252-4.47zm-11.864-9.52c.05.05 4.944 1.146 8.684-.638-1.508-2.67-3.174-4.95-3.174-4.95-3.8 1.427-5.51 5.588-5.51 5.588zm5.51 5.588c.05.05 4.944 1.146 8.684-.638-1.508-2.67-3.174-4.95-3.174-4.95-3.8 1.427-5.51 5.588-5.51 5.588z" />
       </svg>
     )
   }
-  
+
   return icons[name] || null
 }
 
@@ -77,8 +78,8 @@ function Section({ id, title, eyebrow, children }) {
     <section id={id} className="py-20">
       <div className="container mx-auto max-w-[1200px] px-6">
         {eyebrow && <div className="text-sm tracking-[0.2em] text-[#7aa6ff] mb-4 font-medium animate-fade-up">{eyebrow}</div>}
-        {title && <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-12 text-white animate-fade-up" style={{fontFamily: 'var(--font-heading)', animationDelay: '0.2s'}}>{title}</h2>}
-        <div className="animate-fade-up" style={{animationDelay: '0.4s'}}>
+        {title && <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-12 text-white animate-fade-up" style={{ fontFamily: 'var(--font-heading)', animationDelay: '0.2s' }}>{title}</h2>}
+        <div className="animate-fade-up" style={{ animationDelay: '0.4s' }}>
           {children}
         </div>
       </div>
@@ -92,7 +93,7 @@ function Header() {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    const sections = ['home','about','projects','services','contact']
+    const sections = ['home', 'about', 'projects', 'services', 'contact']
       .map(id => document.getElementById(id))
       .filter(Boolean)
 
@@ -121,16 +122,16 @@ function Header() {
             <div className="absolute inset-0 bg-gradient-to-r from-[#7c5cff] to-[#00c2ff] rounded-full opacity-0 group-hover:opacity-20 blur-md transition-opacity duration-300"></div>
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-lg tracking-wide" style={{fontFamily: 'var(--font-heading)'}}>INEZA TETA Landra</span>
+            <span className="font-bold text-lg tracking-wide" style={{ fontFamily: 'var(--font-heading)' }}>INEZA TETA Landra</span>
             <span className="text-xs text-[#7aa6ff] font-medium tracking-wider">Developer & Designer</span>
           </div>
         </a>
-        
+
         {/* Mobile Menu Button */}
-        <button 
-          aria-label="Toggle menu" 
-          className="md:hidden w-12 h-12 grid place-items-center rounded-xl border border-white/20 text-[#e6edf3] hover:bg-white/10 transition-all duration-300 hover:scale-105" 
-          onClick={()=>setOpen(v=>!v)}
+        <button
+          aria-label="Toggle menu"
+          className="md:hidden w-12 h-12 grid place-items-center rounded-xl border border-white/20 text-[#e6edf3] hover:bg-white/10 transition-all duration-300 hover:scale-105"
+          onClick={() => setOpen(v => !v)}
         >
           <div className={`w-6 h-6 flex flex-col justify-center items-center transition-all duration-300 ${open ? 'rotate-45' : ''}`}>
             <span className={`w-5 h-0.5 bg-current transition-all duration-300 ${open ? 'rotate-90 translate-y-0' : '-translate-y-1'}`}></span>
@@ -138,23 +139,23 @@ function Header() {
             <span className={`w-5 h-0.5 bg-current transition-all duration-300 ${open ? '-rotate-90 -translate-y-0' : 'translate-y-1'}`}></span>
           </div>
         </button>
-        
+
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-1 text-[#a6b3c2]">
           {[
-            ['home','Home'],
-            ['about','About'],
-            ['projects','Projects'],
-            ['services','Services'],
-            ['contact','Contact']
-          ].map(([id,label]) => (
-            <a 
-              key={id} 
-              href={`#${id}`} 
-              className={`relative px-4 py-3 rounded-xl transition-all duration-300 hover:text-[#e6edf3] hover:bg-[rgba(124,92,255,0.15)] hover:scale-105 ${active===id ? 'text-[#e6edf3] bg-[rgba(124,92,255,0.1)]' : ''}`}
+            ['home', 'Home'],
+            ['about', 'About'],
+            ['projects', 'Projects'],
+            ['services', 'Services'],
+            ['contact', 'Contact']
+          ].map(([id, label]) => (
+            <a
+              key={id}
+              href={`#${id}`}
+              className={`relative px-4 py-3 rounded-xl transition-all duration-300 hover:text-[#e6edf3] hover:bg-[rgba(124,92,255,0.15)] hover:scale-105 ${active === id ? 'text-[#e6edf3] bg-[rgba(124,92,255,0.1)]' : ''}`}
             >
               {label}
-              {active===id && (
+              {active === id && (
                 <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-6 h-0.5 bg-gradient-to-r from-[#7c5cff] to-[#00c2ff] rounded-full"></div>
               )}
             </a>
@@ -167,31 +168,31 @@ function Header() {
           </div>
         </nav>
       </div>
-      
+
       {/* Enhanced Mobile Menu */}
       {open && (
         <div className="md:hidden border-t border-white/20 bg-[rgba(11,15,20,0.95)] backdrop-blur-xl">
           <div className="max-w-[1200px] mx-auto px-6 py-4 space-y-2">
             {[
-              ['home','Home'],
-              ['about','About'],
-              ['projects','Projects'],
-              ['services','Services'],
-              ['contact','Contact']
-            ].map(([id,label]) => (
-              <a 
-                key={id} 
-                href={`#${id}`} 
-                onClick={()=>setOpen(false)} 
-                className={`block px-4 py-3 rounded-xl transition-all duration-300 hover:text-[#e6edf3] hover:bg-[rgba(124,92,255,0.15)] ${active===id ? 'text-[#e6edf3] bg-[rgba(124,92,255,0.1)]' : 'text-[#a6b3c2]'}`}
+              ['home', 'Home'],
+              ['about', 'About'],
+              ['projects', 'Projects'],
+              ['services', 'Services'],
+              ['contact', 'Contact']
+            ].map(([id, label]) => (
+              <a
+                key={id}
+                href={`#${id}`}
+                onClick={() => setOpen(false)}
+                className={`block px-4 py-3 rounded-xl transition-all duration-300 hover:text-[#e6edf3] hover:bg-[rgba(124,92,255,0.15)] ${active === id ? 'text-[#e6edf3] bg-[rgba(124,92,255,0.1)]' : 'text-[#a6b3c2]'}`}
               >
                 {label}
               </a>
             ))}
             <div className="pt-4 border-t border-white/20">
-              <a 
-                href="#contact" 
-                onClick={()=>setOpen(false)} 
+              <a
+                href="#contact"
+                onClick={() => setOpen(false)}
                 className="block w-full text-center bg-gradient-to-r from-[#1e90ff] to-[#4db6ff] text-white font-semibold rounded-xl px-6 py-3 no-underline shadow-[0_8px_25px_rgba(30,144,255,0.3)] hover:shadow-[0_12px_35px_rgba(30,144,255,0.4)] transition-all duration-300"
               >
                 Hire Me
@@ -209,15 +210,15 @@ function Socials() {
     { name: 'LinkedIn', icon: 'linkedin', url: 'https://linkedin.com/in/yourprofile', color: 'from-[#0077b5] to-[#00a0dc]' },
     { name: 'GitHub', icon: 'github', url: 'https://github.com/yourusername', color: 'from-[#333] to-[#555]' },
     { name: 'Twitter', icon: 'twitter', url: 'https://twitter.com/yourhandle', color: 'from-[#1da1f2] to-[#0d8bd9]' },
-    
+
   ]
-  
+
   return (
     <div className="flex items-center gap-3">
       {socialLinks.map(social => (
-        <a 
+        <a
           key={social.name}
-          href={social.url} 
+          href={social.url}
           className={`w-10 h-10 rounded-full bg-gradient-to-r ${social.color} flex items-center justify-center hover:scale-110 transition-transform shadow-lg hover:shadow-xl`}
           title={social.name}
           target="_blank"
@@ -250,10 +251,10 @@ function Hero() {
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-2 h-2 bg-white rounded-full animate-float-soft"></div>
-        <div className="absolute top-40 right-32 w-1 h-1 bg-blue-400 rounded-full animate-float-soft" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full animate-float-soft" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-40 right-32 w-1 h-1 bg-blue-400 rounded-full animate-float-soft" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full animate-float-soft" style={{ animationDelay: '2s' }}></div>
       </div>
-      
+
       <div className="container mx-auto max-w-[1200px] px-6 grid gap-16 md:grid-cols-[1.1fr_0.9fr] items-center relative z-10">
         <div className="space-y-8">
           {/* Professional name tag */}
@@ -263,10 +264,10 @@ function Hero() {
               <span className="text-[#7c5cff] text-sm font-medium tracking-wider">INEZA TETA LANDRA</span>
             </div>
           </div>
-          
+
           {/* Main headline with professional typography */}
-          <div className="animate-fade-in-left" style={{animationDelay: '0.2s'}}>
-            <h1 className="text-5xl sm:text-7xl font-black leading-[0.9] mb-6" style={{fontFamily: 'var(--font-heading)'}}>
+          <div className="animate-fade-in-left" style={{ animationDelay: '0.2s' }}>
+            <h1 className="text-5xl sm:text-7xl font-black leading-[0.9] mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
               <span className="block text-white">CREATING</span>
               <span className="block bg-gradient-to-r from-[#00c2ff] via-[#7c5cff] to-[#00c2ff] bg-clip-text text-transparent animate-gradient">
                 DIGITAL
@@ -274,26 +275,26 @@ function Hero() {
               <span className="block text-white">EXPERIENCES</span>
             </h1>
           </div>
-          
+
           {/* Dynamic role display */}
-          <div className="animate-fade-in-left" style={{animationDelay: '0.4s'}}>
+          <div className="animate-fade-in-left" style={{ animationDelay: '0.4s' }}>
             <div className="h-16 relative overflow-hidden">
               <h2 key={roleIndex} className="absolute inset-0 text-2xl sm:text-3xl font-bold text-[#a6b3c2] transition-all duration-500 ease-in-out">
                 {roles[roleIndex]}
               </h2>
             </div>
           </div>
-          
+
           {/* Professional description */}
-          <div className="animate-fade-in-left" style={{animationDelay: '0.6s'}}>
+          <div className="animate-fade-in-left" style={{ animationDelay: '0.6s' }}>
             <p className="text-lg sm:text-xl text-[#a6b3c2] leading-relaxed max-w-2xl font-light">
-              I craft exceptional digital products that combine cutting-edge technology with intuitive design. 
+              I craft exceptional digital products that combine cutting-edge technology with intuitive design.
               Specializing in modern web applications and user experiences that drive business growth.
             </p>
           </div>
-          
+
           {/* Call-to-action buttons */}
-          <div className="animate-fade-in-left" style={{animationDelay: '0.8s'}}>
+          <div className="animate-fade-in-left" style={{ animationDelay: '0.8s' }}>
             <div className="flex flex-col sm:flex-row gap-4 items-start">
               <a href="#contact" className="group relative bg-gradient-to-r from-[#1e90ff] to-[#4db6ff] text-white font-semibold px-8 py-4 rounded-2xl shadow-2xl hover:shadow-[0_20px_40px_rgba(30,144,255,0.4)] transition-all duration-300 hover:scale-105">
                 <span className="relative z-10">Start a Project</span>
@@ -308,7 +309,7 @@ function Hero() {
             </div>
           </div>
         </div>
-        
+
         {/* Professional portrait with enhanced animations */}
         <div className="relative animate-fade-in-right">
           <div className="relative w-[420px] h-[420px] mx-auto">
@@ -316,11 +317,11 @@ function Hero() {
             <div className="relative w-full h-full rounded-full overflow-hidden ring-8 ring-[#7c5cff] shadow-[0_0_0_1px_rgba(124,92,255,0.3),0_0_60px_rgba(124,92,255,0.4),0_0_120px_rgba(124,92,255,0.2),0_30px_60px_rgba(0,0,0,0.6)] animate-pulse-glow">
               <img src="./IMG-20240821-WA0101.jpg" alt="INEZA TETA Landra - Professional Developer & Designer" className="w-full h-full object-cover" loading="eager" />
             </div>
-            
+
             {/* Floating elements for visual interest */}
             <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-[#00c2ff] to-[#7c5cff] rounded-full animate-float-soft opacity-80"></div>
-            <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-gradient-to-r from-[#7c5cff] to-[#00c2ff] rounded-full animate-float-soft opacity-60" style={{animationDelay: '1s'}}></div>
-            <div className="absolute top-1/2 -left-8 w-6 h-6 bg-white/30 rounded-full animate-float-soft" style={{animationDelay: '2s'}}></div>
+            <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-gradient-to-r from-[#7c5cff] to-[#00c2ff] rounded-full animate-float-soft opacity-60" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute top-1/2 -left-8 w-6 h-6 bg-white/30 rounded-full animate-float-soft" style={{ animationDelay: '2s' }}></div>
           </div>
         </div>
       </div>
@@ -345,7 +346,7 @@ function About() {
         <div>
           <p className="text-[#a6b3c2] mb-5 text-lg leading-relaxed">Hi! I'm Landra, a creative technologist passionate about bridging design and code. I craft accessible, high-performance apps and brands that stand out. When I'm not coding, I'm sketching new UX ideas or exploring design trends.</p>
           <div className="grid grid-cols-3 gap-4 mb-6">
-            {[['1+','Happy Clients'],['1+','Years Experience'],['1','Awards Won']].map(([k, v])=> (
+            {[['1+', 'Happy Clients'], ['1+', 'Years Experience'], ['1', 'Awards Won']].map(([k, v]) => (
               <div key={v} className="rounded-2xl p-4 border border-white/10 text-center bg-[rgba(255,255,255,0.02)] hover:bg-[rgba(255,255,255,0.05)] transition-colors">
                 <div className="text-[22px] font-extrabold">{k}</div>
                 <div className="text-[#a6b3c2] text-xs">{v}</div>
@@ -369,14 +370,14 @@ function Skills() {
     { name: "Photoshop", color: "#31a8ff", icon: <Icon name="design" className="w-7 h-7" /> },
     { name: "MongoDB", color: "#10aa50", icon: <Icon name="system" className="w-7 h-7" /> },
     { name: "Git", color: "#0055ff", icon: <Icon name="ux" className="w-7 h-7" /> },
-    
+
   ]
   return (
     <Section id="skills" eyebrow="SKILLS & TOOLS" title="My Toolbox">
       <div className="flex flex-wrap gap-4 justify-center">
         {skills.map(skill => (
-          <div key={skill.name} title={skill.name} className="flex items-center gap-2 px-4 py-2 rounded-2xl shadow-soft font-bold" style={{background: `linear-gradient(92deg, ${skill.color}22 60%, #111420)`, color: skill.color, border: `1.5px solid ${skill.color}99`}}>
-            {skill.icon} <span style={{fontFamily:'Poppins, Inter', color: '#fff'}}>{skill.name}</span>
+          <div key={skill.name} title={skill.name} className="flex items-center gap-2 px-4 py-2 rounded-2xl shadow-soft font-bold" style={{ background: `linear-gradient(92deg, ${skill.color}22 60%, #111420)`, color: skill.color, border: `1.5px solid ${skill.color}99` }}>
+            {skill.icon} <span style={{ fontFamily: 'Poppins, Inter', color: '#fff' }}>{skill.name}</span>
           </div>
         ))}
       </div>
@@ -386,35 +387,35 @@ function Skills() {
 
 function Projects() {
   const cards = [
-    { 
-      id: 1, 
-      title: 'E-Commerce Platform', 
-      desc: 'Modern online store with advanced filtering, secure payments, and admin dashboard. Built with performance and accessibility in mind.', 
+    {
+      id: 1,
+      title: 'E-Commerce Platform',
+      desc: 'Modern online store with advanced filtering, secure payments, and admin dashboard. Built with performance and accessibility in mind.',
       tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop&crop=center',
       liveUrl: '#',
       githubUrl: '#',
-      color: 'blob-shape-3' 
+      color: 'blob-shape-3'
     },
-    { 
-      id: 2, 
-      title: 'Creative Portfolio', 
-      desc: 'Interactive portfolio showcasing design work with smooth animations and unique visual effects. Fully responsive and optimized.', 
+    {
+      id: 2,
+      title: 'Creative Portfolio',
+      desc: 'Interactive portfolio showcasing design work with smooth animations and unique visual effects. Fully responsive and optimized.',
       tech: ['Next.js', 'Tailwind', 'Framer Motion', 'GSAP'],
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop&crop=center',
       liveUrl: '#',
       githubUrl: '#',
-      color: 'blob-shape-4' 
+      color: 'blob-shape-4'
     },
-    { 
-      id: 3, 
-      title: 'Mobile Banking App', 
-      desc: 'Secure banking application with biometric authentication, transaction history, and real-time notifications. Focus on user trust and security.', 
+    {
+      id: 3,
+      title: 'Mobile Banking App',
+      desc: 'Secure banking application with biometric authentication, transaction history, and real-time notifications. Focus on user trust and security.',
       tech: ['React Native', 'Figma', 'Firebase', 'TypeScript'],
       image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=500&h=300&fit=crop&crop=center',
       liveUrl: '#',
       githubUrl: '#',
-      color: 'blob-shape' 
+      color: 'blob-shape'
     }
   ]
   const trackRef = useRef(null)
@@ -429,13 +430,13 @@ function Projects() {
     setIndex(i)
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     const el = trackRef.current
     if (!el) return
     const onScroll = () => {
       const w = el.firstElementChild ? el.firstElementChild.getBoundingClientRect().width : 1
       const i = Math.round(el.scrollLeft / (w + 20))
-      setIndex(Math.max(0, Math.min(cards.length-1, i)))
+      setIndex(Math.max(0, Math.min(cards.length - 1, i)))
     }
     el.addEventListener('scroll', onScroll, { passive: true })
     return () => el.removeEventListener('scroll', onScroll)
@@ -444,23 +445,23 @@ function Projects() {
   return (
     <Section id="projects" eyebrow="MY WORK" title="Featured Projects">
       <div className="relative">
-        
-        <div ref={trackRef} className="flex gap-8 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 [-ms-overflow-style:none] [scrollbar-width:none]" style={{scrollbarWidth:'none'}}>
-          {cards.map((card, i)=> (
+
+        <div ref={trackRef} className="flex gap-8 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 [-ms-overflow-style:none] [scrollbar-width:none]" style={{ scrollbarWidth: 'none' }}>
+          {cards.map((card, i) => (
             <article key={card.id} className="min-w-[380px] md:min-w-0 md:flex-1 snap-center hover-lift group">
               {/* Square project container */}
               <div className="relative w-full aspect-square rounded-2xl overflow-hidden border border-white/10 bg-[#0f141b] shadow-2xl">
                 {/* Project Image */}
                 <div className="absolute inset-0">
-                  <img 
-                    src={card.image} 
+                  <img
+                    src={card.image}
                     alt={`${card.title} project screenshot`}
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
                 </div>
-                
+
                 {/* Overlay content */}
                 <div className="absolute inset-0 flex flex-col justify-end p-6">
                   <div className="flex flex-wrap gap-2 mb-3">
@@ -474,19 +475,19 @@ function Projects() {
                   <p className="text-white/90 text-sm leading-relaxed">{card.desc}</p>
                 </div>
               </div>
-              
+
               {/* Action buttons */}
               <div className="flex gap-3 mt-4">
-                <a 
-                  href={card.liveUrl} 
+                <a
+                  href={card.liveUrl}
                   className="flex-1 bg-gradient-to-r from-[#1e90ff] to-[#4db6ff] text-white font-semibold rounded-xl px-4 py-3 text-center hover:scale-105 transition-transform shadow-lg"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Live Demo
                 </a>
-                <a 
-                  href={card.githubUrl} 
+                <a
+                  href={card.githubUrl}
                   className="flex-1 border border-white/20 bg-white/5 text-white font-semibold rounded-xl px-4 py-3 text-center hover:bg-white/10 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -499,8 +500,8 @@ function Projects() {
           ))}
         </div>
         <div className="flex items-center justify-center gap-2 mt-8">
-          {cards.map((_,i)=> (
-            <button key={i} onClick={()=>scrollTo(i)} className={`w-3 h-3 rounded-full transition-all ${index===i ? 'bg-white/80 scale-125' : 'bg-white/30 hover:bg-white/50'}`}/>
+          {cards.map((_, i) => (
+            <button key={i} onClick={() => scrollTo(i)} className={`w-3 h-3 rounded-full transition-all ${index === i ? 'bg-white/80 scale-125' : 'bg-white/30 hover:bg-white/50'}`} />
           ))}
         </div>
       </div>
@@ -508,39 +509,7 @@ function Projects() {
   )
 }
 
-function Services() {
-  const services = [
-    {t:'Website Design',d:'Beautiful and responsive websites', icon:'design'},
-    {t:'UI/UX Design',d:'Research, wireframes, hi-fi prototypes', icon:'ux'},
-    {t:'Design Systems',d:'Reusable components and tokens', icon:'system'},
-    {t:'Frontend Dev',d:'Clean, accessible implementations', icon:'code'},
-  ]
-  return (
-    <Section id="services" eyebrow="SERVICES" title={<span>DESIGN <span className="text-[#38a0ff]">SERVICES</span> I AM PROVIDING</span>}>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-        {services.map((s, i) => (
-          <div key={s.t} className="hover-lift group">
-          
-            <div className="relative w-full aspect-square rounded-2xl overflow-hidden border border-white/10 bg-[#0f141b] shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#0f141b] to-[#1a2332] flex items-center justify-center">
-                <div className="text-center text-[#a6b3c2]">
-                  <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-r from-[#7c5cff] to-[#00c2ff] flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Icon name={s.icon} className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-xs">Service</p>
-                </div>
-              </div>
-            </div>
-            <div className="p-5 bg-[rgba(255,255,255,0.02)] border border-white/10 rounded-2xl mt-4">
-              <h3 className="text-[16px] font-semibold mb-2">{s.t}</h3>
-              <p className="text-[#a6b3c2] text-sm">{s.d}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </Section>
-  )
-}
+
 
 function Experience() {
   const items = [
@@ -586,46 +555,46 @@ function Contact() {
           <form className="grid gap-4" onSubmit={handleSubmit}>
             <div className="relative">
               <label className="text-sm text-[#a6b3c2] mb-2 block">Full name</label>
-              <input 
-                className="w-full px-4 py-3 rounded-xl border border-white/10 bg-[rgba(255,255,255,0.05)] text-[#e6edf3] focus:border-[#00c2ff] focus:outline-none transition-colors" 
-                type="text" 
-                name="name" 
-                placeholder="Your name" 
+              <input
+                className="w-full px-4 py-3 rounded-xl border border-white/10 bg-[rgba(255,255,255,0.05)] text-[#e6edf3] focus:border-[#00c2ff] focus:outline-none transition-colors"
+                type="text"
+                name="name"
+                placeholder="Your name"
                 value={formData.name}
-                onChange={(e) => setFormData({...formData, name: e.target.value})}
-                required 
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                required
               />
             </div>
             <div className="relative">
               <label className="text-sm text-[#a6b3c2] mb-2 block">Email</label>
-              <input 
-                className="w-full px-4 py-3 rounded-xl border border-white/10 bg-[rgba(255,255,255,0.05)] text-[#e6edf3] focus:border-[#00c2ff] focus:outline-none transition-colors" 
-                type="email" 
-                name="email" 
-                placeholder="you@example.com" 
+              <input
+                className="w-full px-4 py-3 rounded-xl border border-white/10 bg-[rgba(255,255,255,0.05)] text-[#e6edf3] focus:border-[#00c2ff] focus:outline-none transition-colors"
+                type="email"
+                name="email"
+                placeholder="you@example.com"
                 value={formData.email}
-                onChange={(e) => setFormData({...formData, email: e.target.value})}
-                required 
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                required
               />
             </div>
             <div className="relative">
               <label className="text-sm text-[#a6b3c2] mb-2 block">Message</label>
-              <textarea 
-                className="w-full px-4 py-3 rounded-xl border border-white/10 bg-[rgba(255,255,255,0.05)] text-[#e6edf3] min-h-[120px] focus:border-[#00c2ff] focus:outline-none transition-colors resize-none" 
-                name="message" 
-                placeholder="What are we building?" 
+              <textarea
+                className="w-full px-4 py-3 rounded-xl border border-white/10 bg-[rgba(255,255,255,0.05)] text-[#e6edf3] min-h-[120px] focus:border-[#00c2ff] focus:outline-none transition-colors resize-none"
+                name="message"
+                placeholder="What are we building?"
                 value={formData.message}
-                onChange={(e) => setFormData({...formData, message: e.target.value})}
-                required 
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                required
               />
             </div>
-            <button 
-              className="bg-gradient-to-r from-[#1e90ff] to-[#4db6ff] text-white font-bold rounded-xl px-6 py-3 w-fit hover:scale-105 transition-transform disabled:opacity-50 disabled:cursor-not-allowed" 
+            <button
+              className="bg-gradient-to-r from-[#1e90ff] to-[#4db6ff] text-white font-bold rounded-xl px-6 py-3 w-fit hover:scale-105 transition-transform disabled:opacity-50 disabled:cursor-not-allowed"
               type="submit"
               disabled={isSubmitting}
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
-        </button>
+            </button>
           </form>
         </div>
         <div className="grid gap-6">
@@ -668,7 +637,7 @@ function Footer() {
     { name: 'LinkedIn', icon: 'linkedin', url: '#', color: 'from-[#1e90ff] to-[#4db6ff]' },
     { name: 'GitHub', icon: 'github', url: '#', color: 'from-[#2c3e50] to-[#34495e]' },
     { name: 'Twitter', icon: 'twitter', url: '#', color: 'from-[#00c2ff] to-[#7c5cff]' },
-  
+
   ]
 
   return (
@@ -679,14 +648,14 @@ function Footer() {
             {/* Footer Logo Section */}
             <div className="flex items-center gap-3 mb-4">
               <img src={Logo} alt="INEZA TETA Landra Logo" className="w-8 h-8" />
-              <h3 className="text-xl font-bold bg-gradient-to-r from-[#00c2ff] to-[#7c5cff] bg-clip-text text-transparent" style={{fontFamily: 'var(--font-heading)'}}>INEZA TETA Landra</h3>
+              <h3 className="text-xl font-bold bg-gradient-to-r from-[#00c2ff] to-[#7c5cff] bg-clip-text text-transparent" style={{ fontFamily: 'var(--font-heading)' }}>INEZA TETA Landra</h3>
             </div>
             <p className="text-[#a6b3c2] text-sm leading-relaxed">Frontend Developer & UI/UX Designer crafting beautiful, functional digital experiences.</p>
             <div className="flex gap-3">
               {socialLinks.map((social) => (
-                <a 
+                <a
                   key={social.name}
-                  href={social.url} 
+                  href={social.url}
                   className={`w-10 h-10 rounded-full bg-gradient-to-r ${social.color} flex items-center justify-center hover:scale-110 transition-transform shadow-lg`}
                   title={social.name}
                 >
@@ -695,7 +664,7 @@ function Footer() {
               ))}
             </div>
           </div>
-          
+
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Navigation</h3>
             <div className="grid grid-cols-2 gap-2">
@@ -707,7 +676,7 @@ function Footer() {
               <a href="#contact" className="text-[#a6b3c2] text-sm hover:text-[#00c2ff] transition-colors">Contact</a>
             </div>
           </div>
-          
+
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Get In Touch</h3>
             <div className="space-y-3">
@@ -732,7 +701,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-white/10 mt-8 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-[#a6b3c2] text-sm">© {year} INEZA TETA Landra. All rights reserved.</p>
@@ -749,10 +718,12 @@ function Footer() {
 
 export default function App() {
   return (
-    <div className="min-h-full" style={{color:'#e6edf3', background:
-      'radial-gradient(1200px 800px at 80% -10%, rgba(124, 92, 255, 0.18), transparent 60%), '+
-      'radial-gradient(1000px 700px at 10% -20%, rgba(0, 194, 255, 0.18), transparent 55%), '+
-      '#0b0f14'}}>
+    <div className="min-h-full" style={{
+      color: '#e6edf3', background:
+        'radial-gradient(1200px 800px at 80% -10%, rgba(124, 92, 255, 0.18), transparent 60%), ' +
+        'radial-gradient(1000px 700px at 10% -20%, rgba(0, 194, 255, 0.18), transparent 55%), ' +
+        '#0b0f14'
+    }}>
       <Header />
       <Hero />
       <About />
