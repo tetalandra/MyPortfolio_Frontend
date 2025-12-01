@@ -8,7 +8,7 @@ export default function About() {
         <div className="relative">
           <div className="relative h-[320px] w-[320px] mx-auto">
             <div className="relative w-full h-full rounded-2xl overflow-hidden ring-4 ring-[#7c5cff] shadow-2xl">
-              <img src="./IMG-20240821-WA0101.jpg" alt="INEZA TETA Landra professional portrait" className="w-full h-full object-cover" loading="lazy" />
+              <img src="/IMG-20240821-WA0101.jpg" alt="INEZA TETA Landra professional portrait" className="w-full h-full object-cover" loading="lazy" />
             </div>
           </div>
         </div>
