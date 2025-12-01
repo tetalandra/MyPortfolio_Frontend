@@ -1,6 +1,7 @@
 import React from 'react'
 import Icon from '../components/Icon'
 import Logo from '../assets/logo.svg'
+import { motion } from 'framer-motion'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -11,25 +12,33 @@ export default function Footer() {
     { name: 'Dribbble', icon: 'dribbble', url: '#', color: 'from-[#1e90ff] to-[#4db6ff]' }
   ]
   return (
-    <footer className="border-t border-white/10 pt-12 pb-8">
+    <motion.footer
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className="border-t border-white/10 pt-12 pb-8"
+    >
       <div className="container mx-auto max-w-[1200px] px-6">
         <div className="grid gap-8 md:grid-cols-3">
           <div className="space-y-4">
             <div className="flex items-center gap-3 mb-4">
               <img src={Logo} alt="INEZA TETA Landra Logo" className="w-8 h-8" />
-              <h3 className="text-xl font-bold bg-gradient-to-r from-[#00c2ff] to-[#7c5cff] bg-clip-text text-transparent" style={{fontFamily: 'var(--font-heading)'}}>INEZA TETA Landra</h3>
+              <h3 className="text-xl font-bold bg-gradient-to-r from-[#00c2ff] to-[#7c5cff] bg-clip-text text-transparent" style={{ fontFamily: 'var(--font-heading)' }}>INEZA TETA Landra</h3>
             </div>
             <p className="text-[#a6b3c2] text-sm leading-relaxed">Frontend Developer & UI/UX Designer crafting beautiful, functional digital experiences.</p>
             <div className="flex gap-3">
               {socialLinks.map((social) => (
-                <a 
+                <motion.a
                   key={social.name}
-                  href={social.url} 
-                  className={`w-10 h-10 rounded-full bg-gradient-to-r ${social.color} flex items-center justify-center hover:scale-110 transition-transform shadow-lg`}
+                  href={social.url}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className={`w-10 h-10 rounded-full bg-gradient-to-r ${social.color} flex items-center justify-center shadow-lg`}
                   title={social.name}
                 >
                   <Icon name={social.icon} className="w-5 h-5 text-white" />
-                </a>
+                </motion.a>
               ))}
             </div>
           </div>
@@ -78,7 +87,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   )
 }
 
