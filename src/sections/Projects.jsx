@@ -126,5 +126,3 @@ export default function Projects() {
     </Section>
   )
 }
-
-
