@@ -71,7 +71,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.2 }}
-              className="min-w-[380px] md:min-w-0 md:flex-1 snap-center hover-lift group"
+              className="min-w-[85vw] sm:min-w-[380px] md:min-w-0 md:flex-1 snap-center hover-lift group"
             >
               <div className="relative w-full aspect-square rounded-2xl overflow-hidden border border-white/10 bg-[#0f141b] shadow-2xl">
                 <div className="absolute inset-0">

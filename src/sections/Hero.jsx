@@ -55,7 +55,7 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h1 className="text-5xl sm:text-7xl font-black leading-[0.9] mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
+            <h1 className="text-4xl sm:text-7xl font-black leading-[0.9] mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
               <span className="block text-white">CREATING</span>
               <span className="block bg-gradient-to-r from-[#00c2ff] via-[#7c5cff] to-[#00c2ff] bg-clip-text text-transparent animate-gradient">
                 DIGITAL
@@ -113,7 +113,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="relative"
         >
-          <div className="relative w-[420px] h-[420px] mx-auto">
+          <div className="relative w-full max-w-[420px] aspect-square mx-auto">
             <div className="relative w-full h-full rounded-full overflow-hidden ring-8 ring-[#7c5cff] shadow-[0_0_0_1px_rgba(124,92,255,0.3),0_0_60px_rgba(124,92,255,0.4),0_0_120px_rgba(124,92,255,0.2),0_30px_60px_rgba(0,0,0,0.6)] animate-pulse-glow">
               <img src="/IMG-20240821-WA0101.jpg" alt="INEZA TETA Landra" className="w-full h-full object-cover" loading="eager" />
             </div>
