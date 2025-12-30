@@ -6,15 +6,20 @@ import { motion } from 'framer-motion'
 import project1 from '../assets/project-1.png'
 import project2 from '../assets/project-2.png'
 import project3 from '../assets/project-3.png'
+import project4 from '../assets/project-4.png'
+import project5 from '../assets/project-5.png'
+import project6 from '../assets/project-6.png'
+import project7 from '../assets/project-7.png'
+import project8 from '../assets/project-8.jpg'
 
 export default function Projects() {
   const cards = [
     {
       id: 1,
       title: 'TUZA',
-      desc: 'Modern online store with advanced filtering, secure payments, and admin dashboard. Built with performance and accessibility in mind.It is built to help land tenants to be able to pay house rent easily ans safely',
+      desc: 'Modern Rent paying application which helps land tenants to pay house rent easily and also landlords to manage the house rent easily by tracking the payment process easily',
       tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      image: project1,
+      image: project7,
       liveUrl: '#',
       githubUrl: 'https://github.com/tetalandra/TUZA_Project',
       color: 'blob-shape-3'
@@ -22,21 +27,21 @@ export default function Projects() {
     {
       id: 2,
       title: 'Medicare',
-      desc: 'Interactive portfolio showcasing design work with smooth animations and unique visual effects. It is health care web application for helping patients to access the health services easily',
+      desc: 'Interactive medical care website which will help patients to access the health services easily ',
       tech: ['Next.js', 'Tailwind', 'Framer Motion', 'GSAP'],
-      image: project2,
+      image: project8,
       liveUrl: '#',
       githubUrl: 'https://github.com/tetalandra/Medicare',
       color: 'blob-shape-4'
     },
     {
       id: 3,
-      title: 'HealthHub',
-      desc: 'Secure banking application with biometric authentication, transaction history, and real-time notifications. Focus on user trust and security.',
+      title: 'RICH',
+      desc: 'Secure blockchain application which will help people to connect their wallets together so that they can be able to buy the bitcoin easily',
       tech: ['React Native', 'Figma', 'Firebase', 'TypeScript'],
-      image: project3,
+      image: project5,
       liveUrl: '#',
-      githubUrl: 'https://github.com/tetalandra/HealthHub',
+      githubUrl: 'https://github.com/tetalandra/Rich-frontend',
       color: 'blob-shape'
     }
   ]
