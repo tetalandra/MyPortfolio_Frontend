@@ -23,7 +23,7 @@ export default function About() {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               whileHover={{ scale: 1.02 }}
             >
-              <img src="/IMG-20240821-WA0101.jpg" alt="INEZA TETA Landra professional portrait" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
+              <img src="../landra.jpg" alt="INEZA TETA Landra professional portrait" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
 
               {/* Gradient Overlay on Hover */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#7c5cff]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
