@@ -3,36 +3,40 @@ import Section from '../components/Section'
 import Icon from '../components/Icon'
 import { motion } from 'framer-motion'
 
+import project1 from '../assets/project-1.png'
+import project2 from '../assets/project-2.png'
+import project3 from '../assets/project-3.png'
+
 export default function Projects() {
   const cards = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      desc: 'Modern online store with advanced filtering, secure payments, and admin dashboard. Built with performance and accessibility in mind.',
+      title: 'TUZA',
+      desc: 'Modern online store with advanced filtering, secure payments, and admin dashboard. Built with performance and accessibility in mind.It is built to help land tenants to be able to pay house rent easily ans safely',
       tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop&crop=center',
+      image: project1,
       liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/tetalandra/TUZA_Project',
       color: 'blob-shape-3'
     },
     {
       id: 2,
-      title: 'Creative Portfolio',
-      desc: 'Interactive portfolio showcasing design work with smooth animations and unique visual effects. Fully responsive and optimized.',
+      title: 'Medicare',
+      desc: 'Interactive portfolio showcasing design work with smooth animations and unique visual effects. It is health care web application for helping patients to access the health services easily',
       tech: ['Next.js', 'Tailwind', 'Framer Motion', 'GSAP'],
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop&crop=center',
+      image: project2,
       liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/tetalandra/Medicare',
       color: 'blob-shape-4'
     },
     {
       id: 3,
-      title: 'Mobile Banking App',
+      title: 'HealthHub',
       desc: 'Secure banking application with biometric authentication, transaction history, and real-time notifications. Focus on user trust and security.',
       tech: ['React Native', 'Figma', 'Firebase', 'TypeScript'],
-      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=500&h=300&fit=crop&crop=center',
+      image: project3,
       liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/tetalandra/HealthHub',
       color: 'blob-shape'
     }
   ]

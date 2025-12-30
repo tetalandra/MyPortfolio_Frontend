@@ -124,6 +124,7 @@ export default function Hero() {
             />
             <motion.div
               animate={{ y: [0, 15, 0] }}
+              
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               className="absolute -bottom-6 -left-6 w-12 h-12 bg-gradient-to-r from-[#7c5cff] to-[#00c2ff] rounded-full opacity-60"
             />
