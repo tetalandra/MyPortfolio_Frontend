@@ -7,14 +7,33 @@ export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
-    setTimeout(() => {
+
+    try {
+      const response = await fetch('http://localhost:3000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setFormData({ name: '', email: '', message: '' })
+        alert('Message sent successfully!')
+      } else {
+        alert(data.error || 'Failed to send message. Please try again.')
+      }
+    } catch (error) {
+      console.error('Error:', error)
+      alert('Failed to connect to the server. Please ensure the backend is running.')
+    } finally {
       setIsSubmitting(false)
-      setFormData({ name: '', email: '', message: '' })
-      alert('Message sent successfully!')
-    }, 2000)
+    }
   }
 
   return (

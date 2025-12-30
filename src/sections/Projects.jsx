@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import Section from '../components/Section'
 import Icon from '../components/Icon'
 import { motion } from 'framer-motion'
@@ -22,7 +22,7 @@ export default function Projects() {
       image: project7,
       liveUrl: '#',
       githubUrl: 'https://github.com/tetalandra/TUZA_Project',
-      color: 'blob-shape-3'
+      color: 'from-[#1e90ff] to-[#4db6ff]'
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ export default function Projects() {
       image: project8,
       liveUrl: '#',
       githubUrl: 'https://github.com/tetalandra/Medicare',
-      color: 'blob-shape-4'
+      color: 'from-[#00c2ff] to-[#7c5cff]'
     },
     {
       id: 3,
@@ -42,95 +42,100 @@ export default function Projects() {
       image: project5,
       liveUrl: '#',
       githubUrl: 'https://github.com/tetalandra/Rich-frontend',
-      color: 'blob-shape'
+      color: 'from-[#7c5cff] to-[#be4bdb]'
     }
   ]
-  const trackRef = useRef(null)
-  const [index, setIndex] = useState(0)
-
-  const scrollTo = (i) => {
-    const el = trackRef.current
-    if (!el) return
-    const children = Array.from(el.children)
-    const target = children[i]
-    if (target) target.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' })
-    setIndex(i)
-  }
-
-  useEffect(() => {
-    const el = trackRef.current
-    if (!el) return
-    const onScroll = () => {
-      const w = el.firstElementChild ? el.firstElementChild.getBoundingClientRect().width : 1
-      const i = Math.round(el.scrollLeft / (w + 20))
-      setIndex(Math.max(0, Math.min(cards.length - 1, i)))
-    }
-    el.addEventListener('scroll', onScroll, { passive: true })
-    return () => el.removeEventListener('scroll', onScroll)
-  }, [])
 
   return (
     <Section id="projects" eyebrow="MY WORK" title="Featured Projects">
-      <div className="relative">
-        <div ref={trackRef} className="flex gap-8 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 [-ms-overflow-style:none] [scrollbar-width:none]" style={{ scrollbarWidth: 'none' }}>
-          {cards.map((card, i) => (
-            <motion.article
-              key={card.id}
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.2 }}
-              className="min-w-[85vw] sm:min-w-[380px] md:min-w-0 md:flex-1 snap-center hover-lift group"
-            >
-              <div className="relative w-full aspect-square rounded-2xl overflow-hidden border border-white/10 bg-[#0f141b] shadow-2xl">
-                <div className="absolute inset-0">
-                  <img
-                    src={card.image}
-                    alt={`${card.title} project screenshot`}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-                </div>
-                <div className="absolute inset-0 flex flex-col justify-end p-6">
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {card.tech.map(tech => (
-                      <span key={tech} className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium text-white border border-white/30">
-                        {tech}
-                      </span>
-                    ))}
+      <div className="flex flex-col gap-32">
+        {cards.map((card, i) => (
+          <motion.article
+            key={card.id}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className={`flex flex-col ${i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 items-center`}
+          >
+            {/* Project Visual (Device Trio) */}
+            <div className="w-full lg:w-3/5 group perspective-1000">
+              <div className="device-trio transform transition-transform duration-700 group-hover:scale-[1.02]">
+
+                {/* Monitor (Back Center) */}
+                <div className="monitor-wrapper">
+                  <div className="monitor-frame">
+                    <div className="monitor-screen">
+                      <img src={card.image} alt="Desktop view" />
+                      <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none" />
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{card.title}</h3>
-                  <p className="text-white/90 text-sm leading-relaxed">{card.desc}</p>
                 </div>
+
+                {/* Laptop (Front Right) */}
+                <div className="laptop-wrapper">
+                  <div className="laptop-frame">
+                    <div className="laptop-screen">
+                      <img src={card.image} alt="Laptop view" />
+                    </div>
+                    <div className="laptop-base" />
+                  </div>
+                </div>
+
+                {/* Phone (Front Left) */}
+                <div className="phone-wrapper">
+                  <div className="phone-frame">
+                    <div className="phone-screen">
+                      <div className="phone-notch" />
+                      <img src={card.image} alt="Mobile view" className="object-cover object-left" />
+                    </div>
+                  </div>
+                </div>
+
               </div>
-              <div className="flex gap-3 mt-4">
+            </div>
+
+            {/* Project Info */}
+            <div className="w-full lg:w-2/5 flex flex-col gap-6">
+              <div>
+                <h3 className={`text-3xl font-bold bg-gradient-to-r ${card.color} bg-clip-text text-transparent mb-4 inline-block`}>
+                  {card.title}
+                </h3>
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  {card.desc}
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                {card.tech.map(tech => (
+                  <span key={tech} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex gap-4 pt-2">
                 <a
                   href={card.liveUrl}
-                  className="flex-1 bg-gradient-to-r from-[#1e90ff] to-[#4db6ff] text-white font-semibold rounded-xl px-4 py-3 text-center hover:scale-105 transition-transform shadow-lg"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="px-6 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-colors"
                 >
                   Live Demo
                 </a>
                 <a
                   href={card.githubUrl}
-                  className="flex-1 border border-white/20 bg-white/5 text-white font-semibold rounded-xl px-4 py-3 text-center hover:bg-white/10 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="px-6 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors flex items-center gap-2"
                 >
-                  <Icon name="github" className="w-5 h-5 inline mr-2" />
+                  <Icon name="github" className="w-5 h-5" />
                   Code
                 </a>
               </div>
-            </motion.article>
-          ))}
-        </div>
-        <div className="flex items-center justify-center gap-2 mt-8">
-          {cards.map((_, i) => (
-            <button key={i} onClick={() => scrollTo(i)} className={`w-3 h-3 rounded-full transition-all ${index === i ? 'bg-white/80 scale-125' : 'bg-white/30 hover:bg-white/50'}`} />
-          ))}
-        </div>
+            </div>
+          </motion.article>
+        ))}
       </div>
     </Section>
   )
