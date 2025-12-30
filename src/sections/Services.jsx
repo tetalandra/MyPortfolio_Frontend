@@ -22,7 +22,7 @@ export default function Services() {
     <Section id="services" eyebrow="SERVICES" title={<span>DESIGN <span className="text-[#7c5cff]">SERVICES</span> I AM PROVIDING</span>}>
       <div className="dashboard-container">
 
-        {/* Left Panel - Website Design */}
+
         <motion.div
           initial={{ opacity: 0, x: -100, rotateY: 90 }}
           whileInView={{ opacity: 1, x: 0, rotateY: 35 }}
@@ -50,7 +50,7 @@ export default function Services() {
           </div>
         </motion.div>
 
-        {/* Center Panel - UI/UX & Design Systems */}
+
         <motion.div
           initial={{ opacity: 0, scale: 0.8, z: -100 }}
           whileInView={{ opacity: 1, scale: 1, z: 100 }}
@@ -61,7 +61,7 @@ export default function Services() {
           <div className="hud-corner hud-tr" />
           <div className="hud-corner hud-bl" />
 
-          {/* Central Lens Animation */}
+
           <div className="central-lens">
             <div className="lens-core" style={{ background: 'radial-gradient(circle, rgba(124, 92, 255, 0.2), transparent 70%)' }} />
           </div>
@@ -75,7 +75,7 @@ export default function Services() {
           </div>
 
           <div className="panel-body relative z-10 grid grid-rows-2 gap-0 p-0 h-full">
-            {/* Top Half - UI/UX */}
+
             <div className="relative p-8 flex items-center justify-between border-b border-[#7c5cff]/10 group hover:bg-[#7c5cff]/5 transition-colors">
               <div className="w-1/2">
                 <h3 className="text-3xl font-bold text-white mb-2 group-hover:text-[#7c5cff] transition-colors">{services[1].t}</h3>
@@ -86,7 +86,7 @@ export default function Services() {
               </div>
             </div>
 
-            {/* Bottom Half - Design Systems */}
+
             <div className="relative p-8 flex items-center justify-between group hover:bg-[#7c5cff]/5 transition-colors">
               <div className="w-32 h-32 border border-[#7c5cff]/30 relative flex items-center justify-center bg-black/50">
                 <div className="absolute inset-0 border-t border-b border-[#7c5cff] opacity-50" />
@@ -100,7 +100,7 @@ export default function Services() {
           </div>
         </motion.div>
 
-        {/* Right Panel - Frontend Dev */}
+
         <motion.div
           initial={{ opacity: 0, x: 100, rotateY: -90 }}
           whileInView={{ opacity: 1, x: 0, rotateY: -35 }}

@@ -8,20 +8,20 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware
+
 app.use(cors());
 app.use(express.json());
 
-// Email Configuration
+
 const transporter = nodemailer.createTransport({
-    service: 'gmail', // You can change this to your provider
+    service: 'gmail',
     auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS, // Use App Password for Gmail
+        pass: process.env.EMAIL_PASS,
     },
 });
 
-// API Endpoint
+
 app.post('/api/contact', async (req, res) => {
     const { name, email, message } = req.body;
 
@@ -30,8 +30,8 @@ app.post('/api/contact', async (req, res) => {
     }
 
     const mailOptions = {
-        from: `"${name}" <${email}>`, // Sender address (shows as "Name <email>")
-        to: process.env.EMAIL_USER, // Your email address (receiver)
+        from: `"${name}" <${email}>`,
+        to: process.env.EMAIL_USER,
         subject: `New Portfolio Message from ${name}`,
         text: `
       Name: ${name}

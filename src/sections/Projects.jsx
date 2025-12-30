@@ -58,11 +58,11 @@ export default function Projects() {
             transition={{ duration: 0.6 }}
             className={`flex flex-col ${i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 items-center`}
           >
-            {/* Project Visual (Device Trio) */}
+
             <div className="w-full lg:w-3/5 group perspective-1000">
               <div className="device-trio transform transition-transform duration-700 group-hover:scale-[1.02]">
 
-                {/* Monitor (Back Center) */}
+
                 <div className="monitor-wrapper">
                   <div className="monitor-frame">
                     <div className="monitor-screen">
@@ -72,7 +72,7 @@ export default function Projects() {
                   </div>
                 </div>
 
-                {/* Laptop (Front Right) */}
+
                 <div className="laptop-wrapper">
                   <div className="laptop-frame">
                     <div className="laptop-screen">
@@ -82,7 +82,6 @@ export default function Projects() {
                   </div>
                 </div>
 
-                {/* Phone (Front Left) */}
                 <div className="phone-wrapper">
                   <div className="phone-frame">
                     <div className="phone-screen">
@@ -95,7 +94,7 @@ export default function Projects() {
               </div>
             </div>
 
-            {/* Project Info */}
+
             <div className="w-full lg:w-2/5 flex flex-col gap-6">
               <div>
                 <h3 className={`text-3xl font-bold bg-gradient-to-r ${card.color} bg-clip-text text-transparent mb-4 inline-block`}>

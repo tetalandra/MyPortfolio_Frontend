@@ -1,9 +1,7 @@
 @import "tailwindcss";
 
-/* Professional Typography */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-/* Theme background gradients similar to original */
 :root {
   --bg: #0b0f14;
   --brand: #7c5cff;
@@ -30,12 +28,10 @@ body {
     #0b0f14;
 }
 
-/* Smooth scrolling for anchor links */
 html {
   scroll-behavior: smooth;
 }
 
-/* Professional Animations */
 @keyframes fade-up {
   from {
     opacity: 0;
@@ -134,7 +130,6 @@ html {
   }
 }
 
-/* Animation Classes */
 .animate-fade-up {
   animation: fade-up 0.8s ease-out both;
 }
@@ -163,7 +158,6 @@ html {
   animation: gradient-shift 4s ease infinite;
 }
 
-/* Staggered animations */
 .animate-stagger-1 {
   animation: slide-up-stagger 0.8s ease-out both;
   animation-delay: 0.1s;
@@ -184,7 +178,6 @@ html {
   animation-delay: 0.4s;
 }
 
-/* Unique blob shapes */
 .blob-shape {
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   background: linear-gradient(45deg, #00c2ff, #7c5cff);
@@ -212,7 +205,6 @@ html {
   animation: blob-morph 5s ease-in-out infinite reverse, gradient-shift 2.5s ease infinite;
 }
 
-/* Particle effects */
 @keyframes particle-float {
 
   0%,
@@ -258,19 +250,16 @@ html {
   background: #34495e;
 }
 
-/* Glass morphism effect */
 .glass-morphism {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Neon glow effect */
 .neon-glow {
   box-shadow: 0 0 20px rgba(0, 194, 255, 0.3), 0 0 40px rgba(124, 92, 255, 0.2);
 }
 
-/* Hover lift effect */
 .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -280,23 +269,18 @@ html {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Unique professional masks (non-square) */
 .mask-hex {
-  /* Hexagon via clip-path */
   clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0 50%);
 }
 
 .mask-ribbon {
-  /* Curvy ribbon-like polygon */
   clip-path: polygon(10% 0%, 90% 5%, 100% 50%, 90% 95%, 10% 100%, 0% 50%);
 }
 
 .mask-blob {
-  /* Organic but stable blob */
   clip-path: polygon(50% 0%, 70% 8%, 90% 25%, 95% 50%, 85% 75%, 65% 92%, 40% 100%, 20% 90%, 7% 70%, 5% 45%, 15% 22%, 32% 8%);
 }
 
-/* Swap text animation */
 @keyframes swap-in {
   0% {
     opacity: 0;
@@ -318,12 +302,10 @@ html {
   animation: swap-in .6s ease both;
 }
 
-/* Smooth squircle-style corners (not a polygon) */
 .squircle {
   border-radius: 38% 62% 63% 37% / 41% 42% 58% 59%;
 }
 
-/* Animated glossy sheen overlay */
 @keyframes sheen-pan {
   0% {
     transform: translateX(-120%) skewX(-12deg);
@@ -356,7 +338,6 @@ html {
   animation: sheen-pan 3.2s ease-in-out infinite;
 }
 
-/* Subtle gradient frame glow using pseudo element */
 .frame-glow {
   position: relative;
 }
@@ -371,7 +352,6 @@ html {
   border-radius: inherit;
 }
 
-/* Duo ring + subtle glow outline for portraits */
 .ring-duo {
   position: relative;
 }
@@ -380,23 +360,19 @@ html {
   content: "";
   position: absolute;
   inset: 10px;
-  /* inner ring offset */
   border-radius: inherit;
   border: 2px solid rgba(255, 255, 255, 0.14);
   pointer-events: none;
 }
 
 
-/* Device Trio Layout */
 .device-trio {
   position: relative;
   width: 100%;
   padding-bottom: 50%;
-  /* Aspect ratio placeholder */
   perspective: 1000px;
 }
 
-/* Monitor (Back Center) */
 .monitor-wrapper {
   position: absolute;
   top: 0;
@@ -410,13 +386,11 @@ html {
   background: #1a1a1a;
   border-radius: 12px;
   padding: 12px 12px 30px 12px;
-  /* Extra bottom padding for "chin" */
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   position: relative;
 }
 
 .monitor-frame::after {
-  /* Stand */
   content: '';
   position: absolute;
   bottom: -40px;
@@ -437,7 +411,6 @@ html {
   position: relative;
 }
 
-/* Laptop (Front Right) */
 .laptop-wrapper {
   position: absolute;
   bottom: -15%;
@@ -462,7 +435,6 @@ html {
 }
 
 .laptop-base::after {
-  /* Notch for opening */
   content: '';
   position: absolute;
   top: 0;
@@ -482,7 +454,6 @@ html {
   position: relative;
 }
 
-/* Phone (Front Left) */
 .phone-wrapper {
   position: absolute;
   bottom: -10%;
@@ -519,7 +490,6 @@ html {
   z-index: 10;
 }
 
-/* Common Image Styles */
 .monitor-screen img,
 .laptop-screen img,
 .phone-screen img {
@@ -528,15 +498,12 @@ html {
   object-fit: cover;
 }
 
-/* 3D Dashboard Services Layout - Purple/Blue Sci-Fi Theme */
 :root {
   --sci-fi-orange: #7c5cff;
-  /* Replaced Orange with Purple */
   --sci-fi-orange-dim: rgba(124, 92, 255, 0.3);
   --sci-fi-bg: #050505;
   --sci-fi-panel: rgba(10, 10, 10, 0.95);
   --sci-fi-accent: #00c2ff;
-  /* Added Blue accent */
 }
 
 .dashboard-container {
@@ -599,7 +566,6 @@ html {
   flex-direction: column;
 }
 
-/* Tech Grid Background */
 .tech-grid-bg {
   position: absolute;
   inset: 0;
@@ -612,7 +578,6 @@ html {
   pointer-events: none;
 }
 
-/* Central Lens/Gauge */
 .central-lens {
   position: absolute;
   top: 35%;
@@ -657,7 +622,6 @@ html {
   z-index: 2;
 }
 
-/* Animations */
 @keyframes spin-slow {
   from {
     transform: rotate(0deg);
@@ -678,7 +642,6 @@ html {
   }
 }
 
-/* Panel Content Styles */
 .panel-header {
   padding: 20px;
   border-bottom: 1px solid rgba(255, 107, 0, 0.1);
@@ -707,7 +670,6 @@ html {
   position: relative;
 }
 
-/* HUD Elements */
 .hud-corner {
   position: absolute;
   width: 20px;
@@ -775,7 +737,6 @@ html {
   }
 }
 
-/* Mobile Responsive */
 @media (max-width: 1024px) {
   .dashboard-container {
     flex-direction: column;
