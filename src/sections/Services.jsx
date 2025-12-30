@@ -5,13 +5,17 @@ import websiteImg from '../assets/website_design_service.png'
 import uiuxImg from '../assets/ui_ux_design_service.png'
 import systemsImg from '../assets/design_systems_service.png'
 import frontendImg from '../assets/frontend_dev_service.png'
+import design1 from '../assets/design-1.png'
+import design2 from '../assets/design-2.png'
+import design3 from '../assets/design-3.png'
+import design4 from '../assets/design-4.png'
 
 export default function Services() {
   const services = [
-    { t: 'Website Design', d: 'Beautiful and responsive websites', img: websiteImg },
-    { t: 'UI/UX Design', d: 'Research, wireframes, hi-fi prototypes', img: uiuxImg },
-    { t: 'Design Systems', d: 'Reusable components and tokens', img: systemsImg },
-    { t: 'Frontend Dev', d: 'Clean, accessible implementations', img: frontendImg },
+    { t: 'Website Design', d: 'Beautiful and responsive websites', img: design1 },
+    { t: 'UI/UX Design', d: 'Research, wireframes, hi-fi prototypes', img: design2 },
+    { t: 'Design Systems', d: 'Reusable components and tokens', img: design3 },
+    { t: 'Frontend Dev', d: 'Clean, accessible implementations', img: design4 },
   ]
   return (
     <Section id="services" eyebrow="SERVICES" title={<span>DESIGN <span className="text-[#38a0ff]">SERVICES</span> I AM PROVIDING</span>}>
