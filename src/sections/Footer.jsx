@@ -9,7 +9,7 @@ export default function Footer() {
     { name: 'LinkedIn', icon: 'linkedin', url: '#', color: 'from-[#1e90ff] to-[#4db6ff]' },
     { name: 'GitHub', icon: 'github', url: '#', color: 'from-[#2c3e50] to-[#34495e]' },
     { name: 'Twitter', icon: 'twitter', url: '#', color: 'from-[#00c2ff] to-[#7c5cff]' },
-    { name: 'Dribbble', icon: 'dribbble', url: '#', color: 'from-[#1e90ff] to-[#4db6ff]' }
+    
   ]
   return (
     <motion.footer
