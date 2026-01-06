@@ -57,7 +57,7 @@ export default function Hero() {
           >
             <h1 className="text-4xl sm:text-7xl font-black leading-[0.9] mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
               <span className="block text-white">CREATING</span>
-              <span className="block bg-gradient-to-r from-[#00c2ff] via-[#7c5cff] to-[#00c2ff] bg-clip-text text-transparent animate-gradient">
+              <span className="block text-[#00c2ff]">
                 DIGITAL
               </span>
               <span className="block text-white">EXPERIENCES</span>
@@ -93,9 +93,9 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.8 }}
           >
             <div className="flex flex-col sm:flex-row gap-4 items-start">
-              <a href="#contact" className="group relative bg-gradient-to-r from-[#1e90ff] to-[#4db6ff] text-white font-semibold px-8 py-4 rounded-2xl shadow-2xl hover:shadow-[0_20px_40px_rgba(30,144,255,0.4)] transition-all duration-300 hover:scale-105">
+              <a href="#contact" className="group relative bg-[#1e90ff] text-white font-semibold px-8 py-4 rounded-2xl shadow-2xl hover:shadow-[0_20px_40px_rgba(30,144,255,0.4)] transition-all duration-300 hover:scale-105">
                 <span className="relative z-10">Start a Project</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#4db6ff] to-[#1e90ff] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-[#1e90ff] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
               <a href="/resume.pdf" className="group border-2 border-[#00c2ff] text-[#00c2ff] font-semibold px-8 py-4 rounded-2xl hover:bg-[#00c2ff] hover:text-white transition-all duration-300 hover:scale-105" download>
                 Download Resume
@@ -120,13 +120,13 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-[#00c2ff] to-[#7c5cff] rounded-full opacity-80"
+              className="absolute -top-4 -right-4 w-8 h-8 bg-[#00c2ff] rounded-full opacity-80"
             />
             <motion.div
               animate={{ y: [0, 15, 0] }}
-              
+
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute -bottom-6 -left-6 w-12 h-12 bg-gradient-to-r from-[#7c5cff] to-[#00c2ff] rounded-full opacity-60"
+              className="absolute -bottom-6 -left-6 w-12 h-12 bg-[#7c5cff] rounded-full opacity-60"
             />
             <motion.div
               animate={{ y: [0, -8, 0] }}

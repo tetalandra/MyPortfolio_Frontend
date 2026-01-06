@@ -34,7 +34,7 @@ export default function Skills() {
             transition={{ delay: i * 0.05 }}
             whileHover={{ scale: 1.1, rotate: 2 }}
             className="flex items-center gap-2 px-4 py-2 rounded-2xl shadow-soft font-bold cursor-default"
-            style={{ background: `linear-gradient(92deg, ${skill.color}22 60%, #111420)`, color: skill.color, border: `1.5px solid ${skill.color}99` }}
+            style={{ background: `${skill.color}22`, color: skill.color, border: `1.5px solid ${skill.color}99` }}
           >
             {skill.icon} <span style={{ fontFamily: 'Poppins, Inter', color: '#fff' }}>{skill.name}</span>
           </motion.div>

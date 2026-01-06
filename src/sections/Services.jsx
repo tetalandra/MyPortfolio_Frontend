@@ -63,7 +63,7 @@ export default function Services() {
 
 
           <div className="central-lens">
-            <div className="lens-core" style={{ background: 'radial-gradient(circle, rgba(124, 92, 255, 0.2), transparent 70%)' }} />
+            <div className="lens-core" style={{ background: 'rgba(124, 92, 255, 0.2)' }} />
           </div>
 
           <div className="panel-header border-b border-[#7c5cff]/30 bg-[#7c5cff]/5">

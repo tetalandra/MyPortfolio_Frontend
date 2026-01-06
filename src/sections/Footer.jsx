@@ -6,10 +6,10 @@ import { motion } from 'framer-motion'
 export default function Footer() {
   const year = new Date().getFullYear()
   const socialLinks = [
-    { name: 'LinkedIn', icon: 'linkedin', url: '#', color: 'from-[#1e90ff] to-[#4db6ff]' },
-    { name: 'GitHub', icon: 'github', url: '#', color: 'from-[#2c3e50] to-[#34495e]' },
-    { name: 'Twitter', icon: 'twitter', url: '#', color: 'from-[#00c2ff] to-[#7c5cff]' },
-    
+    { name: 'LinkedIn', icon: 'linkedin', url: '#', color: 'bg-[#1e90ff]' },
+    { name: 'GitHub', icon: 'github', url: '#', color: 'bg-[#2c3e50]' },
+    { name: 'Twitter', icon: 'twitter', url: '#', color: 'bg-[#00c2ff]' },
+
   ]
   return (
     <motion.footer
@@ -24,7 +24,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-3 mb-4">
               <img src={Logo} alt="INEZA TETA Landra Logo" className="w-8 h-8" />
-              <h3 className="text-xl font-bold bg-gradient-to-r from-[#00c2ff] to-[#7c5cff] bg-clip-text text-transparent" style={{ fontFamily: 'var(--font-heading)' }}>INEZA TETA Landra</h3>
+              <h3 className="text-xl font-bold text-[#00c2ff]" style={{ fontFamily: 'var(--font-heading)' }}>INEZA TETA Landra</h3>
             </div>
             <p className="text-[#a6b3c2] text-sm leading-relaxed">Frontend Developer & UI/UX Designer crafting beautiful, functional digital experiences.</p>
             <div className="flex gap-3">
@@ -34,7 +34,7 @@ export default function Footer() {
                   href={social.url}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  className={`w-10 h-10 rounded-full bg-gradient-to-r ${social.color} flex items-center justify-center shadow-lg`}
+                  className={`w-10 h-10 rounded-full ${social.color} flex items-center justify-center shadow-lg`}
                   title={social.name}
                 >
                   <Icon name={social.icon} className="w-5 h-5 text-white" />
@@ -57,19 +57,19 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">Get In Touch</h3>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#00c2ff] to-[#7c5cff] flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full bg-[#00c2ff] flex items-center justify-center">
                   <Icon name="email" className="w-4 h-4 text-white" />
                 </div>
                 <span className="text-[#a6b3c2] text-sm">landrate2000@gmail.com</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#1e90ff] to-[#4db6ff] flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full bg-[#1e90ff] flex items-center justify-center">
                   <Icon name="location" className="w-4 h-4 text-white" />
                 </div>
                 <span className="text-[#a6b3c2] text-sm">Nyabihu, Rwanda</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#2c3e50] to-[#34495e] flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full bg-[#2c3e50] flex items-center justify-center">
                   <Icon name="time" className="w-4 h-4 text-white" />
                 </div>
                 <span className="text-[#a6b3c2] text-sm">Available for projects</span>

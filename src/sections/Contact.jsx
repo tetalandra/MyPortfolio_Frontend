@@ -87,7 +87,7 @@ export default function Contact() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-[#1e90ff] to-[#4db6ff] text-white font-bold rounded-xl px-6 py-3 w-fit disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-[#1e90ff] text-white font-bold rounded-xl px-6 py-3 w-fit disabled:opacity-50 disabled:cursor-not-allowed"
               type="submit"
               disabled={isSubmitting}
             >
@@ -97,9 +97,9 @@ export default function Contact() {
         </motion.div>
         <div className="grid gap-6">
           {[
-            { title: 'Email', value: 'landrate2000@gmail.com', icon: 'email', color: 'from-[#00c2ff] to-[#7c5cff]' },
-            { title: 'Location', value: 'Nyabihu, Rwanda', icon: 'location', color: 'from-[#1e90ff] to-[#4db6ff]' },
-            { title: 'Response Time', value: 'Within 24-48 hours', icon: 'time', color: 'from-[#2c3e50] to-[#34495e]' }
+            { title: 'Email', value: 'landrate2000@gmail.com', icon: 'email', color: 'bg-[#00c2ff]' },
+            { title: 'Location', value: 'Nyabihu, Rwanda', icon: 'location', color: 'bg-[#1e90ff]' },
+            { title: 'Response Time', value: 'Within 24-48 hours', icon: 'time', color: 'bg-[#2c3e50]' }
           ].map((item, i) => (
             <motion.div
               key={item.title}
@@ -111,7 +111,7 @@ export default function Contact() {
               className="glass-morphism rounded-2xl p-6 hover-lift"
             >
               <div className="flex items-center gap-3 mb-3">
-                <div className={`w-10 h-10 rounded-full bg-gradient-to-r ${item.color} flex items-center justify-center`}>
+                <div className={`w-10 h-10 rounded-full ${item.color} flex items-center justify-center`}>
                   <Icon name={item.icon} className="w-5 h-5 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold">{item.title}</h3>
