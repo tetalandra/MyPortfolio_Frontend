@@ -14,7 +14,8 @@ export default function About() {
           className="relative group"
         >
           {/* Animated Gradient Background/Glow */}
-          <div className="absolute -inset-4 bg-gradient-to-r from-[#00c2ff] via-[#7c5cff] to-[#00c2ff] rounded-xl opacity-30 blur-2xl group-hover:opacity-60 transition duration-1000 group-hover:duration-200 animate-gradient"></div>
+          {/* Animated Gradient Background/Glow - REMOVED */}
+          <div className="absolute -inset-4 bg-[#00c2ff] rounded-xl opacity-30 blur-2xl group-hover:opacity-60 transition duration-1000 group-hover:duration-200"></div>
 
           <div className="relative h-[320px] w-[320px] mx-auto">
             <motion.div
@@ -26,7 +27,8 @@ export default function About() {
               <img src="../landra.jpg" alt="INEZA TETA Landra professional portrait" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
 
               {/* Gradient Overlay on Hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#7c5cff]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              {/* Gradient Overlay on Hover - REMOVED */}
+              <div className="absolute inset-0 bg-[#7c5cff]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </motion.div>
           </div>
         </motion.div>

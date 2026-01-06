@@ -13,10 +13,7 @@ import Footer from './sections/Footer'
 export default function App() {
   return (
     <div className="min-h-full" style={{
-      color: '#e6edf3', background:
-        'radial-gradient(1200px 800px at 80% -10%, rgba(124, 92, 255, 0.18), transparent 60%), ' +
-        'radial-gradient(1000px 700px at 10% -20%, rgba(0, 194, 255, 0.18), transparent 55%), ' +
-        '#0b0f14'
+      color: '#e6edf3', background: '#0b0f14'
     }}>
       <Header />
       <Hero />

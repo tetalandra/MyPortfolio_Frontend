@@ -18,7 +18,7 @@ export default function Experience() {
             viewport={{ once: true }}
             transition={{ delay: index * 0.2 }}
             whileHover={{ y: -5 }}
-            className="rounded-2xl p-4 border border-white/10 shadow-soft bg-gradient-to-b from-white/5 to-transparent hover:border-white/20 transition-colors"
+            className="rounded-2xl p-4 border border-white/10 shadow-soft bg-white/5 hover:border-white/20 transition-colors"
           >
             <h3 className="m-0 text-lg font-semibold">{i.role}</h3>
             <p className="m-0 text-[#a6b3c2]">{i.org} • {i.time}</p>

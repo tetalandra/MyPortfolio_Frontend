@@ -22,7 +22,7 @@ export default function Projects() {
       image: project7,
       liveUrl: '#',
       githubUrl: 'https://github.com/tetalandra/TUZA_Project',
-      color: 'from-[#1e90ff] to-[#4db6ff]'
+      color: 'bg-[#1e90ff]'
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ export default function Projects() {
       image: project8,
       liveUrl: '#',
       githubUrl: 'https://github.com/tetalandra/Medicare',
-      color: 'from-[#00c2ff] to-[#7c5cff]'
+      color: 'bg-[#00c2ff]'
     },
     {
       id: 3,
@@ -42,7 +42,7 @@ export default function Projects() {
       image: project5,
       liveUrl: '#',
       githubUrl: 'https://github.com/tetalandra/Rich-frontend',
-      color: 'from-[#7c5cff] to-[#be4bdb]'
+      color: 'bg-[#7c5cff]'
     }
   ]
 
@@ -67,7 +67,7 @@ export default function Projects() {
                   <div className="monitor-frame">
                     <div className="monitor-screen">
                       <img src={card.image} alt="Desktop view" />
-                      <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none" />
+                      <div className="absolute inset-0 bg-white/5 pointer-events-none" />
                     </div>
                   </div>
                 </div>
@@ -97,7 +97,7 @@ export default function Projects() {
 
             <div className="w-full lg:w-2/5 flex flex-col gap-6">
               <div>
-                <h3 className={`text-3xl font-bold bg-gradient-to-r ${card.color} bg-clip-text text-transparent mb-4 inline-block`}>
+                <h3 className={`text-3xl font-bold ${card.color.replace('bg-', 'text-')} mb-4 inline-block`}>
                   {card.title}
                 </h3>
                 <p className="text-gray-300 text-lg leading-relaxed">
